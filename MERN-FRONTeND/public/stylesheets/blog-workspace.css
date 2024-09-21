@@ -1,0 +1,117 @@
+.heading {
+    color: aliceblue;
+    font-size: 4rem;
+    -webkit-box-reflect: below 0px
+      linear-gradient(transparent, transparent 25%, rgba(0, 0, 0, 0.2));
+    margin-top: 2rem;
+  }
+  body {
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+  .task-heading {
+    color: aliceblue;
+    font-size: 3rem;
+    margin-bottom: 0;
+    margin-left: 5rem;
+  }
+  .task-list,
+  .project-list {
+    overflow: scroll;
+    width: 60vw;
+    height: 40vh;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 20px;
+  }
+  .task-list::-webkit-scrollbar,
+  .project-list::-webkit-scrollbar {
+    display: none;
+  }
+  .task::-webkit-scrollbar,
+  .project::-webkit-scrollbar {
+    display: none;
+  }
+  .task,
+  .project {
+    height: 25vh;
+    width: 55vw;
+    background-color: aliceblue;
+    margin-bottom: 10px;
+    overflow: scroll;
+    border-radius: 30px;
+    padding: 10px;
+    .three-dot {
+      height: 1rem;
+      position: relative;
+      top: -10vh;
+      left: 52vw;
+    }
+  }
+  .task-content,
+  .project-content {
+    margin: 0%;
+  }
+  .task-head,
+  .project-head {
+    margin-bottom: 0;
+  }
+  
+  .first,
+  .second {
+    display: flex;
+    justify-content: space-around;
+  }
+  .btn-box {
+    
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    border-radius: 25px;
+    width: 20vw;
+    height: 40vh;
+    
+    align-self: center;
+  }
+  .profile-box {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    width: 20vw;
+    height: 40vh;
+    padding: 20px;
+    align-self: center;
+  }
+  .profile-photo {
+    background-color: aliceblue;
+    border-radius: 50%;
+    height: 6rem;
+    border: 5px solid black;
+    width: 6rem;
+  }
+  .task-btn{
+    border: 4px solid rgba(0, 0, 0, 0.507);
+    width: 18vw;
+    margin-bottom: 3vh;
+    height: 11vh;
+    border-radius: 40px;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 1rem;
+    color: black;
+    background-color: aliceblue;
+  }
+  .task-btn:hover{
+    border: 4px solid aliceblue;
+    width: 18vw;
+    margin-bottom: 3vh;
+    height: 11vh;
+    border-radius: 40px;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 1rem;
+    color: aliceblue;
+    background-color: black;
+  }

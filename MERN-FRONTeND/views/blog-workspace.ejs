@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog-Workspace</title>
+    <link rel="stylesheet" href="/stylesheets/blog-workspace.css" />
+    <link rel="stylesheet" href="/stylesheets/logo.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo+Black&family=BIZ+UDPMincho:wght@400;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="nav-body">
+      <div class="menu-icon" data-aos="fade-down-right" data-aos-delay="400">
+        <span class="material-symbols-outlined"> menu </span>
+      </div>
+      <div class="nav-list">
+        <div class="nav-content" data-aos="fade-down" data-aos-delay="500">
+          Resources
+        </div>
+        <div class="nav-content" data-aos="fade-down" data-aos-delay="500">
+          Event
+        </div>
+        <div class="nav-content" data-aos="fade-down" data-aos-delay="500">
+          Blog
+        </div>
+        <div class="logo-box" data-aos="zoom-in">
+          <img src="/images/drone-svgrepo-com.svg" class="logo logo-1" />
+          <img
+            src="/images/fighter-jet-plane-svgrepo-com.svg"
+            class="logo logo-2"
+          />
+          <img src="/images/ANIMA-logo.jpg" class="logo logo-3" />
+        </div>
+        <div class="nav-content" data-aos="fade-down" data-aos-delay="500">
+          Gallery
+        </div>
+        <div class="nav-content" data-aos="fade-down" data-aos-delay="500">
+          Projects
+        </div>
+        <div class="nav-content" data-aos="fade-down" data-aos-delay="500">
+          About Us
+        </div>
+      </div>
+      <div class="login-icon" data-aos="fade-down-left" data-aos-delay="400">
+        <span class="material-symbols-outlined"> face </span>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <h1 class="heading">Welcome! to your Workspace</h1>
+    <h1 class="task-heading">Tasks</h1>
+    <div class="first">
+      <div class="task-list">
+        <% user.work.forEach(function(workItem) { %> 
+         
+          <div class="task">
+            <h1 class="task-head"> <%= workItem.workname %> </h1>
+            <img src="/images/threedots.jpg" class="three-dot" />
+            <p class="task-content">
+              <%= workItem.workdetails %>
+            </p>
+          </div>
+      <% }); %>
+     
+      </div>
+      <div class="profile-box">
+        <a href="/uploadimg" style="text-decoration: none;" ><img src="/images/drone-svgrepo-com.svg" alt="" class="profile-photo"></a>
+        <p class="name"><%= user.fullname %></p>
+        <p class="user-name"><%= user.position %></p>
+        <p class="mail"><%= user.email %> </p>
+      </div>
+    </div>
+    <h1 class="task-heading">Projects</h1>
+    <div class="second">
+      <div class="project-list">
+        <% user.project.forEach(function(projectItem) { %> 
+        
+          <div class="project">
+            <h1 class="project-head"> <%= projectItem.projectname %> </h1>
+            <img src="/images/icons8-ellipsis-30.png" class="three-dot" />
+  
+            <p class="project-content">
+              <%= projectItem.projectdetails %> 
+            </p>
+          </div>
+          
+          <% }); %>
+     
+      </div>
+      <div class="btn-box" style="z-index: 90;">
+       <a href="/blogassign" style="z-index: 99;"><input type="button" value="Upload - Blogs/Projects" class="task-btn up-btn" /></a> 
+       <a href="/admin" style="z-index: 99;"> <input type="button" value="Assign - Task/Projects" class="task-btn ass-btn"/></a> 
+      </div>
+    </div>
+  </body>
+</html>

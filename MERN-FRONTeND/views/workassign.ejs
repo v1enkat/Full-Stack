@@ -1,0 +1,44 @@
+<%- include('./partials/header') %>
+
+  
+
+                    <main class="w-3/4 bg-white p-8 shadow ml-4">
+                        <h2 class="text-xl font-bold mb-4">Assign Work Here</h2>
+                        <form autocomplete="off" action="/products/create" method="post" enctype="multipart/form-data">
+                            <div class="mb-6">Work Details</h3>
+                             
+                           
+                                <div class="grid grid-cols-2 gap-4">
+                                    
+                                    <input name="email" type="email" placeholder="Enter the email of the Member"
+                                        class="border p-2 rounded w-full" required>
+                                    <input name="workname" type="text" placeholder="Enter the Name of the assign work"
+                                        class="border p-2 rounded w-full" required>
+                                        <input name="workdetails" type="text" placeholder="Enter the Details of the work you want to Assign"
+                                        class="border p-2 rounded w-full" required>
+                                    <input name="deadline" type="number" placeholder="DeadLine of The assign work"
+                                        class="border p-2 rounded w-full">
+                                        <input class="px-5 py-2 rounded mt-3 bg-blue-500 text-white" type="submit"
+                                        value="Done">
+                                </div>
+                            </div>
+                        </form>
+                        <form autocomplete="off" action="/products/createproject" method="post" enctype="multipart/form-data">
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Project Details</h3>
+                                <div class="grid grid-cols-2 gap-4" style="z-index: 10;" >
+                                    <input name="email" type="email" placeholder="Enter the email of the Member"
+                                        class="border p-2 rounded w-full" required>
+                                        <input name="projectname" type="text" placeholder="Project Name"
+                                        class="border p-2 rounded w-full" required>
+                                        <input name="projectdetails" type="text" placeholder="Project Details"
+                                        class="border p-2 rounded w-full" required>
+                                        <input class="px-5 py-2 rounded mt-3 bg-blue-500 text-white" style="z-index: 99;" type="submit"
+                                        value="Done">
+                                </div>
+                            </div>
+                        </form>
+                    </main>
+                </div>
+            </div>
+            <%- include('./partials/footer') %>
