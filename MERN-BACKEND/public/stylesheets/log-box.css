@@ -1,0 +1,41 @@
+.log-box{
+    height: 100%;
+    width: 100%;
+    color: aliceblue;
+    margin: 0%;
+    font-size: 1.2rem;
+    display: block;
+    
+}
+
+.log-form{
+    height: 25vh;
+    background-color: rebeccapurple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.terms{
+    display: flex;
+
+}
+.term{
+    width: auto;
+    margin-right: 1rem;
+}
+input{
+    width: 30vw;
+    height: 1.5rem;
+}
+.btns{
+    display: flex;
+    justify-content: space-around;
+    width: 15rem;
+}
+.btn{
+    width: 5rem;
+    background-color: black;
+    color: aliceblue;
+    font-family: "Montserrat", sans-serif;
+}
